@@ -1,1 +1,1 @@
-# IJF_code
+This repository contains the scripts to reproduce the results Single-stage Portfolio Optimization with Automated Machine Learning for M6. The codes provided in this respository implement model selection and optimize various regression models using the Method of Moving Asymptotes (Svanberg, 1987). It updates the weights iteratively to minimize the objective function while tracking the objective values and constraint function values throughout the process.
