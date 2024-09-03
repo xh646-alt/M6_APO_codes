@@ -195,4 +195,6 @@ end
 
 
 % Performance metrics net of transaction costs
+ptc=2;   % 2 basis point, can change to 5 or 10
+
 [post_TC_metrics]=TC(returns,concatenated_weights,ptc);
