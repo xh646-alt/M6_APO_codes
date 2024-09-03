@@ -16,9 +16,9 @@ df_returns.Date=datetime(df_returns.Date,'InputFormat','yyyy/MM/dd'); % Convert 
 
 
 % Load S&P500 returns
-data=readtable('filtered_return.csv');
+data=readtable('filtered_return.csv');    % This csv file contain the s&p500 constituent stocks
 
-load sp25.mat   
+load sp25.mat   % This mat file contain the indices of which stock we randomly sample, change to sp50.mat or sp100.mat for additional datasets
 
 df_returns=data(:,sampled_indices);
 
