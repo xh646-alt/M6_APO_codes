@@ -4,9 +4,9 @@ This repository contains the scripts to reproduce the results in "Single-stage P
 
 ## Implemetation
 
-Data Upload.
+Upload the Data;
 
-Running Main.m: By executing Main.m, the user will obtain:
+Run Main.m: By executing Main.m, the user will obtain:
 
 1. I. The main results for M6 per sub-period in the "all_sub_metrics", II. The total (global) results for M6 in "all_metrics", III. The S&P results with no transaction costs (TCs) in "all", IV. The S&P results with TCs in "post_TC_metrics".
   
