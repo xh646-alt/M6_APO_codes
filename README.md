@@ -4,7 +4,7 @@ This repository contains the scripts to reproduce the results in "Single-stage P
 
 ## Implemetation
 
-Data Upload: Please ensure that all data contained in the previously provided attached file is uploaded (I attach it again here). 
+Data Upload.
 
 Running Main.m: By executing Main.m, the user will obtain:
 
