@@ -3,11 +3,16 @@
 This repository contains the scripts to reproduce the results in "Single-stage Portfolio Optimization with Automated Machine Learning for M6". The codes provided in this respository implement model selection and optimize various regression models using the Method of Moving Asymptotes (Svanberg, 1987). It updates the weights iteratively to minimize the objective function while tracking the objective values and constraint function values throughout the process.
 
 ## Implemetation
-To reproduce the main results in the paper, execute the script Main.m. The output variable 'all_sub_metrics' provides performance metrics of APO for the 12 submission periods, while 'all_metrics' yields the global performance metrics. Set caseType=1. The output variable 'all' will contain performance metrics for six benchmark strategies and the APO strategy.
 
-To generate the results for Tables 6, 7, and 8, execute line 198 of Main.m. Set the parameter ptc to 2, 5, 10 respectively. The output variable 'post_TC_metrics' will provide performance ratios net of transaction costs for all strategies under consideration.
+Data Upload: Please ensure that all data contained in the previously provided attached file is uploaded (I attach it again here). 
 
-For Table 5, execute the script additional_exp.m with caseType=2. The resulting output variable 'all' will contain performance metrics for six benchmark strategies based on the Ledoit-Wolf shrinkage covariance estimator. 
+Running Main.m: By executing Main.m, the user will obtain:
+
+1. I. The main results for M6 per sub-period in the "all_sub_metrics", II. The total (global) results for M6 in "all_metrics", III. The S&P results with no transaction costs (TCs) in "all", IV. The S&P results with TCs in "post_TC_metrics".
+  
+2. For getting the S&P50 and S&P100 results, one needs to change the code in line 21 of the Main.m to "load sp50.mat" and "load sp100.mat", respectively, and re-run it.
+   
+3. For changing the TC estimates, one needs to change the code in line 198 of the Main.m to "ptc=5;" and "ptc=10;" for alternative TC estimates, and re-run.
 
 
 The folder also contains the following helper functions:
