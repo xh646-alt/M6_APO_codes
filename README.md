@@ -3,7 +3,56 @@
 This repository contains the scripts to reproduce the results in "Single-stage Portfolio Optimization with Automated Machine Learning for M6". The codes provided in this respository implement model selection and optimize various regression models using the Method of Moving Asymptotes (Svanberg, 1987). It updates the weights iteratively to minimize the objective function while tracking the objective values and constraint function values throughout the process.
 
 ## Implemetation
-To reproduce the main results in the paper, execute the script Main.m. The output variable 'all_sub_metrics' provides performance metrics of APO for the 12 submission periods, while 'all_metrics' yields the global performance metrics.
+To reproduce the main results in the paper, execute the script Main.m. The output variable 'all_sub_metrics' provides performance metrics of APO for the 12 submission periods, while 'all_metrics' yields the global performance metrics. Set caseType=1. The output variable 'all' will contain performance metrics for six benchmark strategies and the APO strategy.
+
+To generate the results for Tables 6, 7, and 8, execute line 198 of Main.m. Set the parameter ptc to 2, 5, 10 respectively. The output variable 'post_TC_metrics' will provide performance ratios net of transaction costs for all strategies under consideration.
+
+For Table 5, execute the script additional_exp.m with caseType=2. The resulting output variable 'all' will contain performance metrics for six benchmark strategies based on the Ledoit-Wolf shrinkage covariance estimator. 
+
+
+The folder also contains the following helper functions:
+
+-	‘get_optimal_coeff.m’: a function that calculates the coefficient for lasso, ridge, elastic net regression 
+
+-	‘lasso_mma’: a function that calculates the lasso regression coefficients using the Method of Moving Asymptotes (MMA), it updates the weights iteratively to minimize the objective function with L1 regularization, while tracking the objective values and constraint function values throughout the process;
+
+-	‘ridge_mma’: a function that calculates the ridge regression coefficients using the MMA optimization method;
+
+-	‘enet_mma’: a function that calculates the elastic net regression coefficients using the MMA optimization method;
+
+-	‘subsolv.m’: a function provided by Krister Svanberg that solves the subproblem in the MMA, efficiently updating the optimization variables while ensuring feasibility with respect to constraints;
+
+-	‘mmasub.m’: a function developed by professor Krister Svanberg that performs one MMA-iteration, aimed at solving the nonlinear programming problem by a primal-dual Newton method;
+
+-	‘performance2.m’: a function that evaluates the portfolio performance metrics, including return, standard deviation, and information ratio;
+
+-	‘volatility_timing.m’: a function that calculates portfolio weights for a volatility timing strategy based on a single dataset
+
+-	‘minvar.m’: a function that determines portfolio weights for a minimum-variance strategy using a single dataset;
+
+-	‘meanvar.m’: a function that computes portfolio weights for a mean-variance strategy based on a single dataset;
+
+-	‘Bayes_Stein.m’: a function that calculates portfolio weights for Bayes-Stein strategy for a single dataset;
+
+-	‘Black_Litterman.m’: a function that determines the portfolio weights according to the Black-Litterman model;
+
+-	‘TC.m’: a function that computes realized portfolio returns and performance metrics net of proportional transactions costs;
+
+-	‘cov1Para.m’: a function developed by Ledoit and Wolf, that performs covariance matrix shrinkage, which improves the estimation of the covariance matrix by combining the sample covariance matrix with a structured target matrix.
+
+The code was executed using MATLAB R2021b. 
+
+
+Data (Only for replication purposes)
+
+Historical price data for the M6 assets (covering the period from January 31, 2020, to January 31, 2022) were sourced from Yahoo Finance and Wharton Research Data Services (WRDS). The two assets specifically obtained from WRDS are marked in red in the file ‘new_df_return.csv’. 
+
+The file ‘filtered_returns.csv’ contains the return data for S&P 500 constituents, obtained from Wharton Research Data Services (WRDS) and is used for additional analysis.
+
+The MAT files ‘sp25.mat’, ‘sp50.mat’, and ‘sp100.mat’ provide the sampling indices for various scenarios. By executing df_returns = data(:, sampled_indices) on line 23 of Main.m, the datasets corresponding to N=25, N=50, and N=100 cases can be recovered.
+
+Due to API limitations, the dataset used in this manuscript cannot be publicly shared.
+
 
 ## Acknowledgement
 We are grateful to Professor Krister Svanberg for kindly sharing the MMA code.
