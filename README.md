@@ -50,7 +50,7 @@ The code was executed using MATLAB R2021b.
 
 Data (Only for replication purposes)
 
-Historical price data for the M6 assets (covering the period from January 31, 2020, to January 31, 2022) were sourced from Yahoo Finance and Wharton Research Data Services (WRDS). The two assets specifically obtained from WRDS are marked in red in the file ‘new_df_return.csv’. 
+Historical price data for the M6 assets (covering the period from January 31, 2020, to January 31, 2022) were sourced from Yahoo Finance and Wharton Research Data Services (WRDS). 
 
 The file ‘filtered_returns.csv’ contains the return data for S&P 500 constituents, obtained from Wharton Research Data Services (WRDS) and is used for additional analysis.
 
