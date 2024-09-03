@@ -11,9 +11,7 @@ df_returns.Properties.VariableNames{1}='Date'; % Rename first column to 'Date'
 
 df_returns.Date=datetime(df_returns.Date,'InputFormat','yyyy/MM/dd'); % Convert 'Date' column to datetime
 
-r_bar=1;
-
-[all_sub_metrics,all_metrics,~,~] = APO(df_returns,r_bar);
+[all_sub_metrics,all_metrics,~,~] = APO(df_returns);
 
 
 
@@ -28,7 +26,7 @@ df_returns(1,:)=[];
 
 df_returns.Date=datetime(df_returns.Date,'InputFormat','yyyy/MM/dd');
 
-[APO_sub_metrics,APO_metrics,xt_APO,concatenated_APO] = APO(df_returns,r_bar);
+[APO_sub_metrics,APO_metrics,xt_APO,concatenated_APO] = APO(df_returns);
 
 % For benchmark strategies, define target dates for slicing data
 target_dates={

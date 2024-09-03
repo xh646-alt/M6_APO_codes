@@ -1,4 +1,4 @@
-function [all_sub_metrics, all_metrics, APO_weights, concatenated_weights] = APO(df_returns,r_bar)
+function [all_sub_metrics, all_metrics, APO_weights, concatenated_weights] = APO(df_returns)
 
 % APO - Adaptive Portfolio Optimization
 % This function performs model selection from Lasso, Ridge, and 
@@ -6,7 +6,6 @@ function [all_sub_metrics, all_metrics, APO_weights, concatenated_weights] = APO
 %
 % Inputs:
 %   - df_returns: return data 
-%   - r_bar: target return used for the optimization process
 %
 % Outputs:
 %   - all_sub_metrics: Performance metrics for each submission period
@@ -69,6 +68,10 @@ end
 
 % Compute optimal weights for all submissions
 APO_weights_all_submissions=cell(1, numel(all_X_train));
+
+ll=1;
+
+r_bar=1/ll;
 
 for i=1:numel(all_X_train)
 
