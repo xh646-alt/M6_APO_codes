@@ -18,6 +18,8 @@ df_returns.Date=datetime(df_returns.Date,'InputFormat','yyyy/MM/dd'); % Convert 
 % Load S&P500 returns
 data=readtable('filtered_return.csv');
 
+load sp25.mat   
+
 df_returns=data(:,sampled_indices);
 
 df_returns.Properties.VariableNames{1}='Date';
