@@ -50,13 +50,9 @@ The code was executed using MATLAB R2021b.
 
 Data (Only for replication purposes)
 
-Historical price data for the M6 assets (covering the period from January 31, 2020, to January 31, 2022) were sourced from Yahoo Finance and Wharton Research Data Services (WRDS). 
+Historical price data for the M6 assets (covering the period from January 31, 2020, to January 31, 2022) were sourced from Yahoo Finance and Wharton Research Data Services (WRDS). The S&P500 data for additional analysis are also obtained from WRDS.
 
-The file ‘filtered_returns.csv’ contains the return data for S&P 500 constituents, obtained from Wharton Research Data Services (WRDS) and is used for additional analysis.
-
-The MAT files ‘sp25.mat’, ‘sp50.mat’, and ‘sp100.mat’ provide the sampling indices for various scenarios. By executing df_returns = data(:, sampled_indices) on line 23 of Main.m, the datasets corresponding to N=25, N=50, and N=100 cases can be recovered.
-
-Due to API limitations, the dataset used in this manuscript cannot be publicly shared.
+Due to API limitations, the datasets used in this manuscript cannot be publicly shared.
 
 
 ## Acknowledgement
