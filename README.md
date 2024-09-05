@@ -9,10 +9,8 @@ Upload the Data;
 Run Main.m: By executing Main.m, the user will obtain:
 
 1. I. The main results for M6 per sub-period in the "all_sub_metrics", II. The total (global) results for M6 in "all_metrics", III. The S&P results with no transaction costs (TCs) in "all", IV. The S&P results with TCs in "post_TC_metrics".
-  
-2. For getting the S&P50 and S&P100 results, one needs to change the code in line 21 of the Main.m to "load sp50.mat" and "load sp100.mat", respectively, and re-run it.
    
-3. For changing the TC estimates, one needs to change the code in line 198 of the Main.m to "ptc=5;" and "ptc=10;" for alternative TC estimates, and re-run.
+2. For changing the TC estimates, one needs to change the code in line 198 of the Main.m to "ptc=5;" and "ptc=10;" for alternative TC estimates, and re-run.
 
 
 The folder also contains the following helper functions:
