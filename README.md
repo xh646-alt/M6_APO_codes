@@ -29,7 +29,7 @@ The folder also contains the following helper functions:
 
 -	‘mmasub.m’: a function developed by professor Krister Svanberg that performs one MMA-iteration, aimed at solving the nonlinear programming problem by a primal-dual Newton method;
 
--	‘performance2.m’: a function that evaluates the portfolio performance metrics, including return, standard deviation, and information ratio;
+-	‘performance2.m’: a function that evaluates the portfolio performance metrics, including mean return, standard deviation, and information ratio;
 
 -	‘volatility_timing.m’: a function that calculates portfolio weights for a volatility timing strategy based on a single dataset
 
